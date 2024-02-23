@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="204.0" prefWidth="269.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxapplication1.terminalController">
+   <children>
+      
+            <Button fx:id="registerBtn" mnemonicParsing="false" onAction="#switchToPrimary" text="&lt;- Go back" />
+      <Label text="Terminal" />
+      <TextArea fx:id="textArea" editable="false" prefHeight="200.0" prefWidth="200.0" scrollTop="100.0"  />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.66665649414062" minWidth="10.0" prefWidth="220.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.33334350585938" minWidth="10.0" prefWidth="72.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="userTextField" promptText="test" />
+            <Button fx:id="executeBtn" mnemonicParsing="false" onAction="#textFieldExecute" prefHeight="24.0" prefWidth="82.0" text="execute" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER" prefHeight="44.0" prefWidth="232.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="ls" onAction="#lsButton" text="ls" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="mv" onAction="#mvButton" mnemonicParsing="false" text="mv" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="cp" onAction="#cpButton" mnemonicParsing="false" text="cp" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="ps" onAction="#psButton" mnemonicParsing="false" text="ps" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="nano" onAction="#nanoButton" mnemonicParsing="false" text="nano" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="whoami" onAction="#whoamiButton" mnemonicParsing="false" text="whoami" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="mkdir" onAction="#mkdirButton" mnemonicParsing="false" text="mkdir" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="tree" onAction="#treeButton" mnemonicParsing="false" text="tree" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

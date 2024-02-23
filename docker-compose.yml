@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  main-vm:
+    container_name: main-vm
+    image: <ubuntu image here>
+    ports:
+      - "3390:3389"
+      - "2022:22"
+    hostname: main-vm
+    volumes:
+      - docker_file_storage_proj:/home/ntu-user/NetBeansProjects
+    networks:
+      - proj_network
+
+  files-container1:
+    container_name: files-container1
+    image: ubuntu
+    ports:
+      - "4848:22"
+    hostname: files-container1
+    networks:
+      - proj_network
+
+  files-container2:
+    container_name: files-container2
+    image: ubuntu
+    ports:
+      - "4849:22"
+    hostname: files-container2
+    networks:
+      - proj_network
+
+  files-container3:
+    container_name: files-container3
+    image: ubuntu
+    ports:
+      - "4850:22"
+    hostname: files-container3
+    networks:
+      - proj_network
+
+  files-container4:
+    container_name: files-container4
+    image: ubuntu
+    ports:
+      - "4851:22"
+    hostname: files-container4
+    networks:
+      - proj_network
+
+networks:
+  proj_network:
+    driver: bridge
+
+volumes:
+  docker_file_storage_proj:

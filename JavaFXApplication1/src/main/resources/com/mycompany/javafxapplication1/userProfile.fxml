@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="266.0" prefWidth="309.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxapplication1.userProfileController">
+    <children>
+        <Label text="Profile settings" />
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Welcome" GridPane.halignment="CENTER" />
+                <TextField fx:id="userTextField" GridPane.columnIndex="1" editable="false" />
+            </children>
+        </GridPane>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+
+                <Button fx:id="updatePasswordBtn" onAction="#updateBtnHandler" text="Update Password" GridPane.columnIndex="1" />
+                <TextField fx:id="newPasswordField" promptText="Enter new password" visible="true" />
+
+            <Label alignment="CENTER" text="or" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" text="Delete password" onAction="#deleteBtnHandler" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+          <Button fx:id="secondaryButton" onAction="#switchToUserWindow" text="&lt;- Go back" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
